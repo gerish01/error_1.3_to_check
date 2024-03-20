@@ -32,6 +32,7 @@ def load_housing_data(housing_path=HOUSING_PATH):
     return pd.read_csv(csv_path)
 
 
+fetch_housing_data()
 housing = load_housing_data()
 
 
