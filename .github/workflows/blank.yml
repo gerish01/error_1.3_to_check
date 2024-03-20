@@ -19,7 +19,7 @@ jobs:
         with:
 <<<<<<< HEAD
           activate-environment: my-env
-          environment-file: env.yml
+          environment-file: environment.yml
 =======
           activate-environment: ci
           environment-file: environment.yml
