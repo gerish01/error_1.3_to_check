@@ -1,0 +1,25 @@
+name: Build Package
+
+on:
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Set up Miniconda
+        uses: conda-incubator/setup-miniconda@v2
+        with:
+          activate-environment: ci
+          environment-file: env.yml
+
+      - name: Install dependencies
+        run: conda env update --name ci --file env.yml --prune
+
+      - name: Run flake8 test
+        run: flake8
+
+      - name: Run nonstandardcode.py
+        run: python nonstandardcode.py
