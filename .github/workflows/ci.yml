@@ -1,20 +1,18 @@
-name : package
+name: CI-Multi-Jobs
 
 on:
   push:
     branches:
-      - main
-      - python/iss#8/package
+      - branch_name
+  workflow_dispatch:
 
 jobs:
+
   without-checkout-job:
-    name: without
-    runs: 'Ubutu-latest'
+    name: Without Checkout
+    runs-on: 'ubuntu-latest'
     steps:
       - name: Install tree & run
-      - run: sudo apt-get install -y tree
-              tree .
-
-      - name: Run nonstandardcode.py
-      - run: python nonstandardcode.py
-
+        run: |
+          sudo apt-get install -y tree
+          tree .
