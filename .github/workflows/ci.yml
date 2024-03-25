@@ -3,7 +3,8 @@ name: CI-Multi-Jobs
 on:
   push:
     branches:
-      - branch_name
+      - main
+      - python/iss#8/package
   workflow_dispatch:
 
 jobs:
