@@ -21,7 +21,7 @@ jobs:
 
       - name: Build package
         run: |
-          python setup.py sdist bdist_wheel
+          python setup.py ERROR_1.3_TO_CHECK_1-0.0.1-py3-none-any.whl
 
       - name: Display directory tree after building
         run: tree
@@ -32,11 +32,6 @@ jobs:
           name: python-package-artifacts
           path: dist/
 
-      - name: Display directory contents after build
-        run: |
-          pwd
-          ls -l
-          ls -l dist/
 
   deploy:
     runs-on: ubuntu-latest
@@ -60,8 +55,6 @@ jobs:
       - name: Install the package
         run: |
           python -m pip install dist/*.whl
-
-      - name: Display directory contents after deployment
+      - name: Run nonstandardcode
         run: |
-          pwd
-          ls -l dist/
+          python nonstandardcode.py
