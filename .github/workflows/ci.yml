@@ -19,6 +19,9 @@ jobs:
       - name: Display directory tree before building
         run: tree
 
+      - name: Building
+        run: python -m build
+
       - name: Display directory tree after building
         run: tree
 
