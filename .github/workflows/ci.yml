@@ -28,3 +28,21 @@ jobs:
 
       - name: Run nonstandardcode.py
         run: python nonstandardcode.py
+
+name : package
+
+on:
+  push:
+    branches:
+      - main
+      - python/iss#8/package
+
+jobs:
+  without-checkout-job:
+    name: without
+    runs: 'Ubutu-latest'
+    steps:
+      - name: Install tree & run
+      - run: sudo apt-get install -y tree
+              tree .
+
