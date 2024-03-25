@@ -53,7 +53,8 @@ jobs:
 
       - name: Install the package
         run: |
-          python -m pip install ERROR_1.3_TO_CHECK_1-0.0.1.dist-info/WHEEL
+        python -m pip install dist/ERROR_1.3_TO_CHECK_1-0.0.1.whl
+
       - name: Run nonstandardcode
         run: |
           python nonstandardcode.py
