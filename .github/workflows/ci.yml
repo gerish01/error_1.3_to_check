@@ -20,8 +20,7 @@ jobs:
         run: tree
 
       - name: Build package
-        run: |
-          python setup.py ERROR_1.3_TO_CHECK_1-0.0.1-py3-none-any.whl
+        run: python setup.py sdist bdist_wheel
 
       - name: Display directory tree after building
         run: tree
