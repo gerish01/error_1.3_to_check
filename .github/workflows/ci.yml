@@ -1,5 +1,4 @@
 name: Python Packaging Workflow
-
 on:
   push:
     branches:
@@ -65,5 +64,4 @@ jobs:
       - name: Display directory contents after deployment
         run: |
           pwd
-          ls -l
           ls -l dist/
