@@ -43,7 +43,8 @@ jobs:
       - name: Setup Conda environment
         uses: conda-incubator/setup-miniconda@v2
         with:
-          activate-environment: python3
+          activate-environment: my-env
+          environment-file: env.yml
 
       - name: Install the package
         run: |
