@@ -30,6 +30,11 @@ jobs:
         with:
           name: python-package-artifacts
           path: dist/
+      - name: Display
+        run: |
+          pwd
+          ls
+          ls dist/
 
   deploy:
     runs-on: ubuntu-latest
