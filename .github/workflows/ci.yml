@@ -1,4 +1,6 @@
+
 name: Python Packaging Workflow
+
 on:
   push:
     branches:
@@ -8,7 +10,6 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
@@ -31,15 +32,10 @@ jobs:
           name: python-package-artifacts
           path: dist/
 
-
   deploy:
     runs-on: ubuntu-latest
     needs: build
-
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
-
       - name: Download build artifact
         uses: actions/download-artifact@v2
         with:
@@ -48,13 +44,7 @@ jobs:
       - name: Setup Conda environment
         uses: conda-incubator/setup-miniconda@v2
         with:
-          activate-environment: my-env
-          environment-file: env.yml
+          activate-environment: python3
 
-      - name: Install the package
-        run: |
-          python pip install dist/ERROR_1.3_TO_CHECK_1-0.0.1-py3-none-any.whl
-
-      - name: Run nonstandardcode
-        run: |
-          python nonstandardcode.py
+      - name: Run nonstandardcode.py
+        run: python -m nonstandardcode
