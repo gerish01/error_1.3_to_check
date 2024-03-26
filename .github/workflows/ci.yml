@@ -54,7 +54,7 @@ jobs:
       - name: Install package
         run: |
           tree
-          pip install dist/*.whl
+          pip install *.whl
 
       - name: Setup Conda environment
         uses: conda-incubator/setup-miniconda@v2
