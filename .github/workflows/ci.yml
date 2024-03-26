@@ -65,4 +65,4 @@ jobs:
           auto-activate-base: false
 
       - name: Run nonstandardcode.py
-        run: python nonstandardcode.py
+        run: python src/awesome_package/nonstandardcode.py
