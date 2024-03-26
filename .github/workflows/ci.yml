@@ -23,7 +23,9 @@ jobs:
         run: tree
 
       - name: Build package
-        run: python -m build
+        run: |
+          pip install build
+          python -m build
 
       - name: Display directory tree after building
         run: tree
