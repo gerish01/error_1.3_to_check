@@ -58,7 +58,7 @@ jobs:
 
       - name: Install package
         run: |
-          pip install dist/*.whl
+          pip install dist/ERROR_1.3_TO_CHECK-1.whl
 
       - name: Run nonstandardcode.py
         run: python nonstandardcode.py
