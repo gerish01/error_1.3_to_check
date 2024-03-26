@@ -47,4 +47,4 @@ jobs:
           activate-environment: python3
 
       - name: Run nonstandardcode.py
-        run: python -m nonstandardcode.py
+        run: python nonstandardcode.py
