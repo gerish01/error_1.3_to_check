@@ -53,7 +53,7 @@ jobs:
         run: |
           ls
           ls -al
-          pip install dist/ERROR_1.3_TO_CHECK_1-0.0.1-py3-none-any.whl
+          pip install ERROR_1.3_TO_CHECK_1-0.0.1-py3-none-any.whl
 
       - name: Setup Conda environment
         uses: conda-incubator/setup-miniconda@v2
