@@ -56,5 +56,9 @@ jobs:
         with:
           name: python-package-artifacts
 
+      - name: Install package
+        run: |
+          pip install dist/*.whl
+
       - name: Run nonstandardcode.py
         run: python nonstandardcode.py
