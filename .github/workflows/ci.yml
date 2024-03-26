@@ -23,7 +23,7 @@ jobs:
         run: tree
 
       - name: Build package
-        run: python setup.py sdist bdist_wheel
+        run: python -m build
 
       - name: Display directory tree after building
         run: tree
