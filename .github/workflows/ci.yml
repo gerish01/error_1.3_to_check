@@ -14,7 +14,7 @@ jobs:
         shell: bash -el {0}
     steps:
       - name: Checkout code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
 
       - name: Install tree CLI tool
         run: sudo apt-get install tree -y
@@ -31,7 +31,7 @@ jobs:
         run: tree
 
       - name: Upload build artifacts
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v4
         with:
           name: python-package-artifacts
           path: dist/
@@ -44,23 +44,21 @@ jobs:
     needs: build
     steps:
       - name: Checkout code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
 
       - name: Download build artifact
-        uses: actions/download-artifact@v2
+        uses: actions/download-artifact@v4
         with:
           name: python-package-artifacts
 
-      - name: Install package
-        run: |
-          pip install *.whl
-
       - name: Setup Conda environment
-        uses: conda-incubator/setup-miniconda@v2
+        uses: conda-incubator/setup-miniconda@v3
         with:
           activate-environment: my-env
           environment-file: env.yml
           auto-activate-base: false
+      - name: Install package
+        run: pip install dist/*.whl
 
-      - name: Run nonstandardcode.py
-        run: python -m awesome_package.nonstandardcode
+      - name: Run pytest
+        run: pytest

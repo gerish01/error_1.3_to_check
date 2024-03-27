@@ -1,7 +1,7 @@
 from setuptools import setup
 
 setup(
-    name="ERROR_1.3_TO_CHECK-1",
+    name="HousePricePrediction",
     version="0.0.1",
     install_requires=[
         "requests",
