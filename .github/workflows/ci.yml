@@ -55,8 +55,9 @@ jobs:
         uses: conda-incubator/setup-miniconda@v3
         with:
           activate-environment: my-env
-          environment-file: env.yml
+          environment-file: deploy/conda/env.yml
           auto-activate-base: false
+
       - name: Install package
         run: pip install dist/*.whl
 
