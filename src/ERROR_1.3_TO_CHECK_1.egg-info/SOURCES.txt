@@ -1,8 +1,0 @@
-pyproject.toml
-setup.py
-src/ERROR_1.3_TO_CHECK_1.egg-info/PKG-INFO
-src/ERROR_1.3_TO_CHECK_1.egg-info/SOURCES.txt
-src/ERROR_1.3_TO_CHECK_1.egg-info/dependency_links.txt
-src/ERROR_1.3_TO_CHECK_1.egg-info/top_level.txt
-src/awesome_package/__init__.py
-src/awesome_package/nonstandardcode.py
