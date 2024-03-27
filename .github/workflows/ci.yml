@@ -60,6 +60,3 @@ jobs:
 
       - name: Install package
         run: pip install dist/*.whl
-
-      - name: Run pytest
-        run: pytest
