@@ -27,6 +27,7 @@ jobs:
           pip install build
           python -m build
 
+
       - name: Display directory tree after building
         run: tree
 
@@ -59,4 +60,10 @@ jobs:
           name: python-package-artifacts
 
       - name: Install package
-        run: pip install dist/*.whl
+        run: pip install python_package-0.0.1-py3-none-any.wh
+
+      - name: Build Package
+        run: pip install -U pytest
+
+      - name: Test
+        run: pytest
