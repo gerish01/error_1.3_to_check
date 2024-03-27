@@ -1,6 +1,6 @@
 def test_pkg_import():
     try:
-        import awesome_package  # noqa
+        import HousePricePrediction  # noqa
     except Exception as e:
         assert False, (
             f"Error: {e}. "
